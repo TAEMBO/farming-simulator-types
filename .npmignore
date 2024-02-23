@@ -1,5 +1,6 @@
-/2022/index.ts
-/2019/index.ts
+/2022/*.ts
+/2019/*.ts
+/types/*.ts
 
 /node_modules
 .gitignore

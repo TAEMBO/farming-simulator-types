@@ -16,10 +16,10 @@
 		"preserveConstEnums": true,
 		"exactOptionalPropertyTypes": true,
 	},
-    "exclude": ["/node_modules"],
 	"include": [
 		"2019/**/*.ts",
 		"2022/**/*.ts",
-		"src/**/**/*.ts",
+        "types/**/*.ts"
     ],
+    "exclude": ["/node_modules"],
 }

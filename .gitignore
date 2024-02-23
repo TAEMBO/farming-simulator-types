@@ -10,4 +10,10 @@
 /2019/*.js.map
 /2019/*.mjs
 
+/types/*.d.ts
+/types/*.d.ts.map
+/types/*.js
+/types/*.js.map
+/types/*.mjs
+
 /node_modules
