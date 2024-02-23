@@ -1,6 +1,11 @@
-/2022/*.ts
-/2019/*.ts
-/types/*.ts
+/2019/index.ts
+
+/2022/enums.ts
+/2022/feeds.ts
+/2022/index.ts
+/2022/routes.ts
+
+/types/index.ts
 
 /node_modules
 .gitignore
