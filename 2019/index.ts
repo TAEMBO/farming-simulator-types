@@ -2,7 +2,7 @@ export const Feeds = {
     dedicatedServerStats(text: string) {
         return `${text}` as const;
     }
-}
+};
 
 export type Empty<T> = {
     [K in keyof T]: undefined;

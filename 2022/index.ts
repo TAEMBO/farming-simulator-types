@@ -1,7 +1,7 @@
-import type { Empty } from '../types';
+import type { Empty } from "../types";
 
-export * from './feeds';
-export * from './enums';
+export * from "./feeds";
+export * from "./enums";
 export * from "./routes";
 export * from "../types";
 

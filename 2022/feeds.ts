@@ -30,4 +30,4 @@ export const Feeds = {
     dedicatedServerSavegame<TFile extends DSSFile>(code: string, file: TFile) {
         return `/feed/dedicated-server-savegame.html?code=${code}&file=${file}` as const;
     }
-}
+};
