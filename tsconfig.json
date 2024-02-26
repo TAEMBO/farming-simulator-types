@@ -15,6 +15,7 @@
 		"strictNullChecks": true,
 		"preserveConstEnums": true,
 		"exactOptionalPropertyTypes": true,
+        "skipLibCheck": true
 	},
 	"include": [
 		"2019/**/*.ts",
