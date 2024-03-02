@@ -47,7 +47,7 @@ export interface Server {
     /** The time of day on the server in seconds. Min `0`, max `86400` */
     readonly dayTime: number;
     /** The name of the game for this server
-     * @note `game` will always be `Farming Simulator 22` in FS22
+     * @note `game` will always be `Farming Simulator 22`
      */
     readonly game: "Farming Simulator 22";
     /** The name of the current map being used */
@@ -56,12 +56,14 @@ export interface Server {
     readonly mapSize: 1024 | 2048 | 4096 | 8192 | 16384;
     /** The file path on the server to the overview PNG of the current map */
     readonly mapOverviewFilename: string;
-    /** `money` will always be 0 in FS22 for unknown reasons */
+    /** The amount of money this savegame has
+     * @note `money` will always be `0` for unknown reasons
+     */
     readonly money: 0;
     /** The name of the server that is displayed to players */
     readonly name: string;
     /** The MP region this server is in
-     * @note `server` will always be an empty string due to there not being MP regions in FS22
+     * @note `server` will always be an empty string for unknown reasons
      */
     readonly server: "";
     /** The version the dedicated server is running, in `X.X.X.X` format */
