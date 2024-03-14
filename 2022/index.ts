@@ -86,6 +86,8 @@ export interface VehicleFill {
     readonly level: number;
 }
 export interface Vehicle {
+    /** The player currently controlling this vehicle, if any */
+    readonly controller?: string;
     /** The model name of this piece of equipment */
     readonly name: string;
     /** The shop category that this piece of equipment resides in */

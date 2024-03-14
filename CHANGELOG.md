@@ -1,5 +1,11 @@
 # farming-simulator-types
 
+## 1.4.1
+
+### Patch Changes
+
+- fix(Vehicle): Add missing `controller` type property
+
 ## 1.4.0
 
 ### Minor Changes
