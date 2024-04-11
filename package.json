@@ -13,7 +13,7 @@
         "lint:2022": "eslint ./2022",
         "lint:types": "eslint ./types",
         "lint": "run-p lint:*",
-        "stage": "npm run build && npx changeset && npx changeset version"
+        "release": "npm run build && changeset publish"
     },
     "keywords": [
         "farming simulator",
