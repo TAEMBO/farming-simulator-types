@@ -1,5 +1,11 @@
 # farming-simulator-types
 
+## 1.5.0
+
+### Minor Changes
+
+- 88a68f1: chore: Add CI workflows
+
 ## 1.4.1
 
 ### Patch Changes
