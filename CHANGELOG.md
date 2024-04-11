@@ -1,5 +1,11 @@
 # farming-simulator-types
 
+## 1.5.1
+
+### Patch Changes
+
+- eec9b82: fix: Add missing source ignores in publish
+
 ## 1.5.0
 
 ### Minor Changes
