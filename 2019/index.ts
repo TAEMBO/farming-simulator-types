@@ -11,7 +11,7 @@ export * from "../types";
  * @returns An array of only the player slots that are in use;
  */
 export function filterUnused(players: Player[]) {
-    return players.filter(x => x.isUsed) as PlayerUsed[];
+    return players.filter((player): player is PlayerUsed => player.isUsed);
 }
 
 /** Additional coordinate data for this player if they are not in a vehicle */
