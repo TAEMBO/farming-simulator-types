@@ -109,16 +109,16 @@ export interface Mod {
     readonly author: string;
     /** The hash code for this mod */
     readonly hash: string;
-    /** The name of this mod */
+    /** The ZIP file name of this mod */
     readonly name: string;
-    /** The version of this mod */
+    /** The version of this mod, in `X.X.X.X` format  */
     readonly version: string;
-    /** The description of this mod */
+    /** The display name of this mod */
     readonly description: string;
 }
 
 export interface Field {
-    /** The static ID of this field */
+    /** The ID of this field */
     readonly id: number;
     /** Whether or not this field is owned by a farm */
     readonly isOwned: boolean;
