@@ -1,5 +1,12 @@
 # farming-simulator-types
 
+## 1.6.0
+
+### Minor Changes
+
+- d001080: refactor(filterUnused): Use type guard instead of assertion
+- eff5324: refactor(Mod, Field): Use more accurate comment details
+
 ## 1.5.1
 
 ### Patch Changes
