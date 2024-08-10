@@ -8,11 +8,10 @@
 /2022/index.ts
 /2022/routes.ts
 
-/types/index.ts
-
 /.changeset
 /.github
 /node_modules
+
 tsconfig.json
 .gitignore
 .eslintrc.json

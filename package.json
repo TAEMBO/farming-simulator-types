@@ -4,10 +4,9 @@
     "version": "1.6.0",
     "scripts": {
         "build": "npm run lint && tsc && npm run wrap",
-        "clean": "rimraf --glob {2019,2022,types}/**/*.{js,mjs,d.ts,*map}",
+        "clean": "rimraf --glob {2019,2022}/**/*.{js,mjs,d.ts,*map}",
         "esm:2019": "gen-esm-wrapper ./2019/index.js ./2019/index.mjs",
         "esm:2022": "gen-esm-wrapper ./2022/index.js ./2022/index.mjs",
-        "esm:types": "gen-esm-wrapper ./types/index.js ./types/index.mjs",
         "wrap": "run-p esm:*",
         "lint:2019": "eslint ./2019",
         "lint:2022": "eslint ./2022",

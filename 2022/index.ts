@@ -3,7 +3,7 @@ import type { Empty } from "../types";
 export * from "./feeds";
 export * from "./enums";
 export * from "./routes";
-export * from "../types";
+export type * from "../types";
 
 /**
  * A type-safe method to filter out unused player slots from a given array of server player slots
