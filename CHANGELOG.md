@@ -1,5 +1,13 @@
 # farming-simulator-types
 
+## 1.7.0
+
+### Minor Changes
+
+- 1367244: chore: Update rimraf
+- fd411ca: build: Ignore additional files for NPM
+- 78a6d6f: build: Change types to declaration file
+
 ## 1.6.0
 
 ### Minor Changes
