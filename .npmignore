@@ -10,7 +10,10 @@
 
 /types/index.ts
 
-/.changesets
+/.changeset
+/.github
 /node_modules
+tsconfig.json
 .gitignore
 .eslintrc.json
+CHANGELOG.md
