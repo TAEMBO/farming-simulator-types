@@ -1,5 +1,11 @@
 # farming-simulator-types
 
+## 1.8.0
+
+### Minor Changes
+
+- 0d960a8: chore: Switch to PNPM
+
 ## 1.7.0
 
 ### Minor Changes
