@@ -3,7 +3,7 @@
     "description": "Helper functions and types for your Farming Simulator dedicated server API",
     "version": "1.7.0",
     "scripts": {
-        "build": "npm run lint && tsc && npm run wrap",
+        "build": "pnpm lint && tsc && pnpm wrap",
         "clean": "rimraf --glob {2019,2022}/**/*.{js,mjs,d.ts,*map}",
         "esm:2019": "gen-esm-wrapper ./2019/index.js ./2019/index.mjs",
         "esm:2022": "gen-esm-wrapper ./2022/index.js ./2022/index.mjs",
@@ -12,7 +12,7 @@
         "lint:2022": "eslint ./2022",
         "lint:types": "eslint ./types",
         "lint": "run-p lint:*",
-        "release": "npm run build && changeset publish"
+        "release": "pnpm build && changeset publish"
     },
     "keywords": [
         "farming simulator",
@@ -44,5 +44,6 @@
         "npm-run-all": "^4.1.5",
         "rimraf": "^5.0.7",
         "typescript": "^5.3.3"
-    }
+    },
+    "packageManager": "pnpm@9.12.2+sha256.2ef6e547b0b07d841d605240dce4d635677831148cd30f6d564b8f4f928f73d2"
 }
