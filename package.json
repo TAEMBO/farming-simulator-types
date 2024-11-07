@@ -23,6 +23,10 @@
     ],
     "author": "TAEMBO",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TAEMBO/farming-simulator-types.git"
+    },
     "exports": {
         "./2019": {
             "types": "./2019/index.d.ts",
