@@ -20,6 +20,7 @@
 	"include": [
 		"2019/**/*.ts",
 		"2022/**/*.ts",
+		"2025/**/*.ts",
         "types/**/*.ts"
     ],
     "exclude": ["/node_modules"],

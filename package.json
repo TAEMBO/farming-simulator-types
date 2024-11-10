@@ -4,19 +4,22 @@
     "version": "1.7.0",
     "scripts": {
         "build": "pnpm lint && tsc && pnpm wrap",
-        "clean": "rimraf --glob {2019,2022,types}/**/*.{js,mjs,d.ts,*map}",
+        "clean": "rimraf --glob {2019,2022,2025,types}/**/*.{js,mjs,d.ts,*map}",
         "esm:2019": "gen-esm-wrapper ./2019/index.js ./2019/index.mjs",
         "esm:2022": "gen-esm-wrapper ./2022/index.js ./2022/index.mjs",
+        "esm:2025": "gen-esm-wrapper ./2025/index.js ./2025/index.mjs",
         "esm:types": "gen-esm-wrapper ./types/index.js ./types/index.mjs",
         "wrap": "run-p esm:*",
         "lint:2019": "eslint ./2019",
         "lint:2022": "eslint ./2022",
+        "lint:2025": "eslint ./2025",
         "lint:types": "eslint ./types",
         "lint": "run-p lint:*",
         "release": "pnpm build && changeset publish"
     },
     "keywords": [
         "farming simulator",
+        "fs25",
         "fs22",
         "fs19",
         "farming simulator api",
@@ -38,6 +41,11 @@
             "types": "./2022/index.d.ts",
             "import": "./2022/index.mjs",
             "require": "./2022/index.js"
+        },
+        "./2025": {
+            "types": "./2025/index.d.ts",
+            "import": "./2025/index.mjs",
+            "require": "./2025/index.js"
         }
     },
     "devDependencies": {

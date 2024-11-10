@@ -8,6 +8,11 @@
 /2022/index.ts
 /2022/routes.ts
 
+/2025/enums.ts
+/2025/feeds.ts
+/2025/index.ts
+/2025/routes.ts
+
 /.changeset
 /.github
 /node_modules

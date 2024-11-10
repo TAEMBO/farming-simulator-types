@@ -4,6 +4,7 @@ A package with helper functions and types for interacting with your [Farming Sim
 Exports are as follows:
 - `/2019` when interacting with an FS19 server
 - `/2022` when interacting with an FS22 server
+- `/2025` when interacting with an FS25 server
 
 Additional exports will be added as new game versions release.
 
@@ -16,7 +17,7 @@ import {
     type DSSResponse,
     Feeds,
     filterUnused
-} from "farming-simulator-types/2022";
+} from "farming-simulator-types/2025";
 
 const response = await fetch("https://example.com" + Feeds.dedicatedServerStats("a1b2c3d4", DSSExtension.JSON));
 const json: DSSResponse = await response.json();
