@@ -1,5 +1,14 @@
 # farming-simulator-types
 
+## 1.8.0
+
+### Minor Changes
+
+- 15297c9: feat: Add exports for FS25
+- 0d960a8: chore: Switch to PNPM
+- 2f834a5: build: Replace declaration file with standard TS file
+- 23eeff6: chore: Add `repository` details
+
 ## 1.7.0
 
 ### Minor Changes
