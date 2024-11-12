@@ -1,7 +1,7 @@
 {
     "name": "farming-simulator-types",
     "description": "Helper functions and types for your Farming Simulator dedicated server API",
-    "version": "1.7.0",
+    "version": "1.8.0",
     "scripts": {
         "build": "pnpm lint && tsc && pnpm wrap",
         "clean": "rimraf --glob {2019,2022,2025,types}/**/*.{js,mjs,d.ts,*map}",
