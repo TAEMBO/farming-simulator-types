@@ -44,7 +44,7 @@ export type PlayedUnused = {
 export type Player = PlayerUsed | PlayedUnused;
 
 export interface Server {
-    /** The time of day on the server in seconds. Min `0`, max `86400` */
+    /** The time of day on the server in milliseconds. Min `0`, max `86400000` */
     readonly dayTime: number;
     /** The name of the game for this server
      * @note `game` will always be `Farming Simulator 25`
