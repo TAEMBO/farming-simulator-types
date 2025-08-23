@@ -1,5 +1,11 @@
 # farming-simulator-types
 
+## 2.0.0
+
+### Major Changes
+
+- c641775: feat: Improve `webapi.json` endpoint documentation
+
 ## 1.8.0
 
 ### Minor Changes
