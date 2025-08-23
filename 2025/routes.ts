@@ -1,3 +1,5 @@
+import type { WebAPIJSONAction } from "./enums";
+
 /** Miscellaneous routes for a Farming Simulator 25 dedicated server */
 export const Routes = {
     /**
@@ -28,10 +30,12 @@ export const Routes = {
         return "/log.json.longpoll" as const;
     },
     /**
-     * Uknown
+     * Used to manage the state of the server
+     * @param action The action to perform on the server
+     * @param code The API access code for the server
      */
-    webApiJson() {
-        return "/webapi.json" as const;
+    webApiJson<TAction extends WebAPIJSONAction>(action: TAction, code: string) {
+        return `/webapi.json?action=${action}&code=${code}` as const;
     },
 
     /**

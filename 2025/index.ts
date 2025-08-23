@@ -141,3 +141,10 @@ export interface DSSObject {
  * @note Top-level object may be empty due to API inconsistencies during saving of game
  */
 export type DSSResponse = DSSObject | Empty<DSSObject>;
+
+/**
+ * Response object from `webapi.json` endpoint
+ */
+export interface WebAPIJSONResponse {
+    readonly result: "failed" | "success"
+}

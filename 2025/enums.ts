@@ -8,3 +8,10 @@ export enum DSSFile {
     Vehicles = "vehicles",
     Economy = "economy"
 }
+
+export enum WebAPIJSONAction {
+    Ping = "ping",
+    RestartServer = "restartServer",
+    StartServer = "startServer",
+    StopServer = "stopServer"
+}
