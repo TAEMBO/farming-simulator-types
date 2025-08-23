@@ -3,7 +3,8 @@ import type { WebAPIJSONAction } from "./enums";
 /** Miscellaneous routes for a Farming Simulator 25 dedicated server */
 export const Routes = {
     /**
-     * Gives a URL path to directly log into the dedicated server's webserver
+     * Gives a URL path to directly log into the dedicated server's webserver.
+     * Can be used to obtain a session cookie for other requests.
      * @param username The username to log in with
      * @param password The password to log in with
      */
@@ -30,12 +31,11 @@ export const Routes = {
         return "/log.json.longpoll" as const;
     },
     /**
-     * Used to manage the state of the server
+     * Used to manage the state of the server. Requires a session cookie else returns a 403.
      * @param action The action to perform on the server
-     * @param code The API access code for the server
      */
-    webApiJson<TAction extends WebAPIJSONAction>(action: TAction, code: string) {
-        return `/webapi.json?action=${action}&code=${code}` as const;
+    webApiJson<TAction extends WebAPIJSONAction>(action: TAction) {
+        return `/webapi.json?action=${action}` as const;
     },
 
     /**
