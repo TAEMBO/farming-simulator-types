@@ -1,5 +1,11 @@
 # farming-simulator-types
 
+## 2.0.1
+
+### Patch Changes
+
+- 485a806: fix: `webapi.json` route does not use API code
+
 ## 2.0.0
 
 ### Major Changes
