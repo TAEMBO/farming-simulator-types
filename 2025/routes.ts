@@ -37,19 +37,11 @@ export const Routes = {
     webApiJson<TAction extends WebAPIJSONAction>(action: TAction) {
         return `/webapi.json?action=${action}` as const;
     },
-
     /**
-     * Used to donwload all mods from the dedicated server
+     * Used to download all mods from the dedicated server
+     * @param onlyActive Whether to only download mods currently activated
      */
-    allModsDownload() {
-        return "/all_mods_download" as const;
-    },
-
-    /**
-     * Used to download all actively used mods from the dedicated server
-     */
-    allModsDownloadActive() {
-        return "/all_mods_download?onlyActive=true" as const;
+    allModsDownload<TOnlyActive extends boolean = false>(onlyActive: TOnlyActive = false as TOnlyActive) {
+        return `/all_mods_download?onlyActive=${onlyActive}` as const;
     }
-
 };
