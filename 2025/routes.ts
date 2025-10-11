@@ -20,6 +20,17 @@ export const Routes = {
         return `/mods/${name}.zip` as const;
     },
     /**
+     * Requests the dedicated server to download and install a [ModHub](https://www.farming-simulator.com/mods.php) mod.
+     * Requires username and password of a web user with mod upload access.
+     * 
+     * @param username The username to log in with
+     * @param password The password to log in with
+     * @param modId The [ModHub](https://www.farming-simulator.com/mods.php) ID for the mod to download and install.
+     */
+    startModDownload(username: string, password: string, modId: string) {
+        return `/mods.html?login=true&username=${username}&password=${password}&startmoddownload=${modId}` as const;
+    },
+    /**
      * Used to display the sample imprint text found in `dedicatedServer.xml`.
      */
     imprint() {
