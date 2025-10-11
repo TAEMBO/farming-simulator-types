@@ -1,5 +1,16 @@
 # farming-simulator-types
 
+## 3.0.0
+
+### Major Changes
+
+- ca7bfd6: docs(2025): Adjust language of Routes functions
+- 2b05cd0: refactor(2025): Consolidate `all_mods_download` endpoint functions
+
+### Minor Changes
+
+- 14725bf: feat(2025): Add `startModDownload()` Routes function
+
 ## 2.0.1
 
 ### Patch Changes
