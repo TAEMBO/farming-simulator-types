@@ -1,5 +1,11 @@
 # farming-simulator-types
 
+## 3.1.0
+
+### Minor Changes
+
+- a85e6cb: Add additional fields to dedicated-server-stats.json route
+
 ## 3.0.0
 
 ### Major Changes
