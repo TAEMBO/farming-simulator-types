@@ -9,9 +9,15 @@ export const Feeds = {
      * GET `/feed/dedicated-server-stats.{json/xml}`
      * @param code The API access code for the server
      * @param extension The format for the response body
+     * @param idcode Used to return additional `configuration` and `statistics` fields from `DSSObject`.
+     * Only functional with `.json` extension
      */
-    dedicatedServerStats<TExtension extends DSSExtension>(code: string, extension: TExtension) {
-        return `/feed/dedicated-server-stats.${extension}?code=${code}` as const;
+    dedicatedServerStats<TExtension extends DSSExtension, TIDCode extends boolean = false>(
+        code: string, extension: TExtension, idcode: TIDCode = false as TIDCode
+    ) {
+        const withIDCode = (idcode ? "&idcode=" : "") as TIDCode extends true ? "&idcode=" : "";
+
+        return `/feed/dedicated-server-stats.${extension}?code=${code}${withIDCode}` as const;
     },
     /**
      * GET `/feed/dedicated-server-stats-map.jpg`

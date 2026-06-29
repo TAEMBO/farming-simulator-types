@@ -1,4 +1,4 @@
-import type { Empty } from "../types";
+import type { PartialObject } from "../types";
 
 export * from "./feeds";
 export * from "./enums";
@@ -33,7 +33,7 @@ export type PlayerUsed = {
     readonly uptime: number;
     /** The player's name */
     readonly name: string;
-} & (Empty<PlayerCoordinates> | PlayerCoordinates);
+} & PartialObject<PlayerCoordinates>;
 
 export type PlayedUnused = {
     /** Whether or not this given slot is used */
@@ -128,23 +128,100 @@ export interface Field {
     readonly z: number;
 }
 
-export interface DSSObject {
+export type DSSObject = {
     readonly server: Server;
     readonly slots: Slots;
     readonly vehicles: Vehicle[];
     readonly mods: Mod[];
     readonly fields: Field[];
+} & PartialObject<DSSObjectWithIDCode>;
+
+export interface DSSObjectWithIDCode {
+    /** Contains data from the Configuration section of the Home page of the web interface
+     * 
+     *  Only sent if `idcode` query parameter is provided with an empty value
+     */
+    readonly configuration: {
+        /** The name of the game for this server, will always be in `Farming Simulator 25 ({version})` format */
+		readonly game: string;
+        /** The name of the server that is displayed to players */
+		readonly serverName: string;
+        /** The password to join the game server, if any */
+		readonly gamePassword?: string;
+        /** The language category this server is listed under */
+		readonly gameLanguage: string;
+        /** The current savegame index selected */
+		readonly savegameIndex: number;
+        /** The IP address the dedicatedServer process has bound itself to */
+		readonly ip: string;
+        /** The port used by the game server for multiplayer connection */
+		readonly port: number;
+        /** The amount of player slots configured for this server */
+		readonly slots: number;
+        /** The economic difficulty selected for the current savegame
+         * 
+         * `1` for Easy, `2` for Normal, `3` for Hard
+         */
+		readonly difficulty: 1 | 2 | 3;
+        /** The interval in minutes for which the game's auto-save runs */
+		readonly saveInterval: number;
+        /** The interval in seconds for which the web stats API refreshes */
+		readonly webStatsInterval: number;
+        /** Whether the game server will pause if no players are on
+         *
+         * `1` for No, `2` for Instantly
+         */
+		readonly pauseGameIfEmpty: 1 | 2;
+        /** Whether cross-play is enabled for the game server */
+		readonly crossPlay: boolean;
+	};
+    /** Contains data from the graphs & charts shown on the Home page of the web interface when the game server is online 
+     * 
+     * Additional field sent only if `idcode` query parameter is provided with an empty value
+     */
+	readonly statistics: {
+        /** A copy of the CPU graph */
+		readonly cpuUsage: {
+            /** The length of data to be shown, in milliseconds */
+			readonly interval: 1800000;
+            /** The data of the blue (system) CPU usage graph. Values are expressed as percentages in decimal form, in FIFO order */
+			readonly data: number[];
+		};
+        /** A copy of the RAM chart */
+		readonly memoryUsage: {
+            /** The maximum amount of memory available on the dedicated server environment, in bytes */
+			readonly max: number;
+            /** The current amount of memory used by the game server, in bytes */
+			readonly current: number;
+		};
+        /** A copy of the Hard Disk chart */
+		readonly diskUsage: {
+            /** The maximum amount of disk space available on the dedicated server environment, in bytes */
+			readonly max: number;
+            /** The current amount of disk space used by mods & savegames, in bytes */
+			readonly current: number;
+		};
+        /** A copy of the Uptime value, in milliseconds */
+		readonly uptime: 0;
+        /** A copy of the Player chart */
+		readonly players: {
+            /** The length of data to be shown, in milliseconds */
+			readonly interval: 86400000;
+            /** The data of the player count graph. Values are expressed as absolute player counts, in FIFO order */
+			readonly data: number[];
+		};
+	}
 }
 
 /**
  * Response object from `dedicated-server-stats.json` endpoint
- * @note Top-level object may be empty due to API inconsistencies during saving of game
+ * @note Top-level object may be empty due to API inconsistencies during writing of `gameStats.xml` file
  */
-export type DSSResponse = DSSObject | Empty<DSSObject>;
+export type DSSResponse = PartialObject<DSSObject>;
 
 /**
  * Response object from `webapi.json` endpoint
  */
 export interface WebAPIJSONResponse {
-    readonly result: "failed" | "success"
+    readonly result: "failed" | "success";
 }
