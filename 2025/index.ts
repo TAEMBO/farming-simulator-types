@@ -183,7 +183,7 @@ export interface DSSObjectWithIDCode {
         /** A copy of the CPU graph */
 		readonly cpuUsage: {
             /** The length of data to be shown, in milliseconds */
-			readonly interval: 1800000;
+			readonly interval: number;
             /** The data of the blue (system) CPU usage graph. Values are expressed as percentages in decimal form, in FIFO order */
 			readonly data: number[];
 		};
@@ -202,11 +202,11 @@ export interface DSSObjectWithIDCode {
 			readonly current: number;
 		};
         /** A copy of the Uptime value, in milliseconds */
-		readonly uptime: 0;
+		readonly uptime: number;
         /** A copy of the Player chart */
 		readonly players: {
             /** The length of data to be shown, in milliseconds */
-			readonly interval: 86400000;
+			readonly interval: number;
             /** The data of the player count graph. Values are expressed as absolute player counts, in FIFO order */
 			readonly data: number[];
 		};
