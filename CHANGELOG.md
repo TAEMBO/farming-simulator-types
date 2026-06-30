@@ -1,5 +1,11 @@
 # farming-simulator-types
 
+## 3.1.1
+
+### Patch Changes
+
+- 08e997b: Inaccurate statistics typings
+
 ## 3.1.0
 
 ### Minor Changes
