@@ -1,5 +1,11 @@
 # farming-simulator-types
 
+## 3.2.0
+
+### Minor Changes
+
+- 0c6b957: feat(2025): Document additional ModHub behavior
+
 ## 3.1.1
 
 ### Patch Changes
