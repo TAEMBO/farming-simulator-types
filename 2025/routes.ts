@@ -21,14 +21,26 @@ export const Routes = {
     },
     /**
      * Requests the dedicated server to download and install a [ModHub](https://www.farming-simulator.com/mods.php) mod.
-     * Requires username and password of a web user with mod upload access.
+     * Requires username and password of a web user with mod upload access, however
+     * `useLogin` can be set to `false` when providing a session cookie instead, which is required when
+     * Public Mod Download is enabled
      * 
      * @param username The username to log in with
      * @param password The password to log in with
-     * @param modId The [ModHub](https://www.farming-simulator.com/mods.php) ID for the mod to download and install.
+     * @param modId The [ModHub](https://www.farming-simulator.com/mods.php) ID for the mod to download and install
+     * @param useLogin Whether to use the specified login information or not for authentication
      */
-    startModDownload(username: string, password: string, modId: string) {
-        return `/mods.html?login=true&username=${username}&password=${password}&startmoddownload=${modId}` as const;
+    startModDownload<TUseLogin extends boolean = true>(username: string, password: string, modId: string, useLogin: TUseLogin = true as TUseLogin) {
+        const loginParam = (useLogin ? "&login=true" : "") as TUseLogin extends true ? "&login=true" : "";
+
+        return `/mods.html?startmoddownload=${modId}${loginParam}&username=${username}&password=${password}` as const;
+    },
+    /**
+     * Used to display the current download progress of an individual ModHub mod
+     * @param modId The [ModHub](https://www.farming-simulator.com/mods.php) ID for the mod to check the progress for
+     */
+    modhubDownloadProgress(modId: string) {
+        return `/mods.html?modhubdownloadprogress=${modId}` as const;
     },
     /**
      * Used to display the sample imprint text found in `dedicatedServer.xml`.

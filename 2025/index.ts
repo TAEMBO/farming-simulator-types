@@ -225,3 +225,13 @@ export type DSSResponse = PartialObject<DSSObject>;
 export interface WebAPIJSONResponse {
     readonly result: "failed" | "success";
 }
+
+/**
+ * Response object from `/mods.html?modhubdownloadprogress={modId}` endpoint
+ */
+export interface ModhubDownloadProgressResponse {
+    /** Total size of mod in bytes */
+    readonly total: number;
+    /** Amount of bytes downloaded for mod */
+    readonly downloaded: number;
+}
